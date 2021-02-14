@@ -1,6 +1,6 @@
 <?php
 
-namespace App\events\values;
+namespace Tests\Helpers\Values;
 
 class Password
 {

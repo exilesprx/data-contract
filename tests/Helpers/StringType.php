@@ -1,7 +1,8 @@
 <?php
 
-namespace App\events\policies;
+namespace Tests\Helpers;
 
+use App\events\policies\DataPolicy;
 use PHPUnit\Framework\Assert;
 
 class StringType extends DataPolicy

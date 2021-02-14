@@ -7,6 +7,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use PHPUnit\Framework\Assert;
+use ReflectionClass;
 
 abstract class Event implements EventDataContract
 {
@@ -46,6 +47,8 @@ abstract class Event implements EventDataContract
 
     public static function getDataContractDefinitionLocation() : string
     {
-        return sprintf("%s%s%s.json", __DIR__, "/definitions/", Str::kebab(static::getEventName()));
+        $class = new ReflectionClass(static::class);
+
+        return sprintf("%s%s%s.json", dirname($class->getFileName()), "/definitions/", Str::kebab(static::getEventName()));
     }
 }

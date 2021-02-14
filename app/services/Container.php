@@ -2,9 +2,9 @@
 
 namespace App\services;
 
-use App\events\policies\Email;
-use App\events\policies\Password;
-use App\events\policies\StringType;
+use Tests\Helpers\Email;
+use Tests\Helpers\Password;
+use Tests\Helpers\StringType;
 use App\events\policies\PolicyContract;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;

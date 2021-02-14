@@ -2,13 +2,13 @@
 
 namespace Tests;
 
-use App\Events\UserCreatedEvent;
+use Tests\Helpers\UserCreatedEvent;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 
-class UserCreatedEventTest extends TestCase
+class EventTest extends TestCase
 {
     /** @test */
     public function it_expects_cache_to_have_definitions()

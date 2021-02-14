@@ -1,8 +1,10 @@
 <?php
 
-namespace App\events\policies;
+namespace Tests\Helpers;
 
+use App\events\policies\DataPolicy;
 use PHPUnit\Framework\Assert;
+use Tests\Helpers\Values\Password as PasswordValue;
 
 class Password extends DataPolicy
 {
@@ -13,6 +15,6 @@ class Password extends DataPolicy
 
     protected function meetsType($data): void
     {
-        Assert::isTrue(preg_match(new \App\events\values\Password(), $data));
+        Assert::assertTrue((bool)preg_match(new PasswordValue(), $data));
     }
 }

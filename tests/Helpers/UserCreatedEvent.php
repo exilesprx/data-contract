@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Events;
+namespace Tests\Helpers;
 
+use App\Events\Event;
 use Illuminate\Support\Arr;
 
 class UserCreatedEvent extends Event
